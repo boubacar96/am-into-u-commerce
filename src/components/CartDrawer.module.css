@@ -42,7 +42,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .header h2 {
@@ -56,7 +56,7 @@
     font-size: 2.5rem;
     cursor: pointer;
     line-height: 1;
-    color: var(--text-dark);
+    color: var(--text-color);
     opacity: 0.6;
     transition: var(--transition);
 }
@@ -92,14 +92,14 @@
     display: flex;
     gap: 1.5rem;
     padding-bottom: 1.5rem;
-    border-bottom: 1px dotted var(--border-light);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .itemImage {
     width: 90px;
     aspect-ratio: 1;
-    background-color: #fff;
-    border: 1px solid var(--border-light);
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -123,7 +123,7 @@
     font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 0.75rem;
-    color: var(--text-dark);
+    color: var(--text-color);
 }
 
 .itemMeta {
@@ -136,7 +136,7 @@
 .quantityControls {
     display: flex;
     align-items: center;
-    border: 1px solid var(--border-light);
+    border: 1px solid var(--border-color);
     height: 32px;
 }
 
@@ -181,8 +181,8 @@
 
 .footer {
     padding: 2rem;
-    background-color: var(--surface-light);
-    border-top: 1px solid var(--border-light);
+    background-color: var(--surface-color);
+    border-top: 1px solid var(--border-color);
 }
 
 .totalRow {
@@ -203,7 +203,7 @@
 .totalAmount {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--text-dark);
+    color: var(--text-color);
 }
 
 .footerNote {

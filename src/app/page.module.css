@@ -49,7 +49,7 @@
     font-weight: 700;
     margin-bottom: 2rem;
     line-height: 1;
-    color: var(--text-dark);
+    color: var(--text-color);
 }
 
 .heroDesc {
@@ -166,7 +166,7 @@
 }
 
 .categoryImage {
-    background-color: var(--surface-light);
+    background-color: var(--surface-color);
     aspect-ratio: 1/1.2;
     display: flex;
     align-items: center;
@@ -181,7 +181,7 @@
 .categoryCard:hover .categoryImage {
     transform: scale(1.02);
     border-color: var(--secondary-color);
-    background-color: #fff;
+    background-color: var(--surface-color);
 }
 
 .categoryTitle {
@@ -217,7 +217,7 @@
 
 .productImageWrapper {
     position: relative;
-    background-color: #fff;
+    background-color: var(--surface-color);
     aspect-ratio: 1/1.2;
     display: flex;
     align-items: center;
@@ -257,7 +257,7 @@
     width: 45px;
     height: 45px;
     background-color: var(--primary-color);
-    color: #fff;
+    color: var(--text-inverse);
     border: none;
     border-radius: 50%;
     font-size: 1.5rem;
@@ -302,7 +302,7 @@
     font-weight: 600;
     margin-bottom: 0.75rem;
     line-height: 1.2;
-    color: var(--text-dark);
+    color: var(--text-color);
 }
 
 .priceContainer {
@@ -314,7 +314,7 @@
 .productPrice {
     font-weight: 700;
     font-size: 1.1rem;
-    color: var(--text-dark);
+    color: var(--text-color);
 }
 
 .oldPrice {
@@ -329,7 +329,7 @@
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 1px;
-    color: var(--text-dark);
+    color: var(--text-color);
     text-decoration: none;
     display: inline-flex;
     align-items: center;

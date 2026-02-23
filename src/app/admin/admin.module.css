@@ -44,7 +44,7 @@
 }
 
 .navLink:hover {
-    background-color: var(--surface-light);
+    background-color: var(--surface-color);
 }
 
 .navLink.active {
@@ -121,9 +121,9 @@
 }
 
 .statCard {
-    background-color: #fff;
+    background-color: var(--card-bg);
     padding: 1.5rem;
-    border: 1px solid var(--border-light);
+    border: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -165,7 +165,7 @@
 .statValue {
     font-size: 1.75rem;
     font-weight: 800;
-    color: var(--text-dark);
+    color: var(--text-color);
     display: block;
 }
 
@@ -185,8 +185,8 @@
 }
 
 .card {
-    background-color: #fff;
-    border: 1px solid var(--border-light);
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -230,18 +230,18 @@
     text-transform: uppercase;
     color: var(--text-muted);
     padding: 1rem 0;
-    border-bottom: 2px solid var(--surface-light);
+    border-bottom: 2px solid var(--border-color);
 }
 
 .table td {
     padding: 1rem 0;
-    border-bottom: 1px solid var(--surface-light);
+    border-bottom: 1px solid var(--border-color);
     font-size: 0.9rem;
 }
 
 .orderId {
     font-weight: 700;
-    color: var(--text-dark);
+    color: var(--text-color);
 }
 
 .orderDate {
@@ -291,7 +291,7 @@
 .productInitial {
     width: 36px;
     height: 36px;
-    background-color: var(--surface-light);
+    background-color: var(--border-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -308,7 +308,7 @@
 .pName {
     font-size: 0.9rem;
     font-weight: 600;
-    color: var(--text-dark);
+    color: var(--text-color);
 }
 
 .pCat {
@@ -324,7 +324,7 @@
 
 .salesCount {
     font-weight: 700;
-    color: var(--text-dark);
+    color: var(--text-color);
 }
 
 .salesLabel {
@@ -354,7 +354,7 @@
 
 .progressContainer {
     height: 6px;
-    background-color: var(--surface-light);
+    background-color: var(--border-color);
     border-radius: 3px;
     overflow: hidden;
 }

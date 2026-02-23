@@ -68,7 +68,7 @@
     font-weight: 700;
     font-size: 1.15rem;
     margin-bottom: 1.5rem;
-    color: var(--text-dark);
+    color: var(--text-color);
 }
 
 .checkboxLabel {
@@ -86,7 +86,7 @@
 }
 
 .checkboxLabel:hover {
-    color: var(--text-dark);
+    color: var(--text-color);
 }
 
 .checkboxInput {
@@ -117,8 +117,8 @@
 .select {
     padding: 0.6rem 1.2rem;
     border: 1px solid var(--border-light);
-    background-color: #fff;
-    color: var(--text-dark);
+    background-color: var(--surface-color);
+    color: var(--text-color);
     font-size: 0.85rem;
     font-weight: 600;
     outline: none;

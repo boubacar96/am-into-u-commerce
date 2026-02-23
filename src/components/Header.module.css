@@ -31,7 +31,7 @@
 .logo {
     font-size: 1.8rem;
     font-weight: 700;
-    color: var(--text-dark);
+    color: var(--text-color);
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -52,7 +52,7 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: var(--transition);
-    color: var(--text-dark);
+    color: var(--text-color);
     opacity: 0.8;
 }
 
@@ -81,7 +81,7 @@
 .searchBar {
     display: flex;
     align-items: center;
-    background-color: var(--surface-light);
+    background-color: var(--surface-color);
     border: 1px solid var(--border-light);
     padding: 0.5rem 1rem;
     border-radius: 2px;
@@ -90,7 +90,7 @@
 
 .searchBar:focus-within {
     border-color: var(--secondary-color);
-    background-color: #fff;
+    background-color: var(--surface-color);
 }
 
 .searchInput {
@@ -107,7 +107,7 @@
     top: calc(100% + 10px);
     right: 0;
     width: 100%;
-    background-color: #fff;
+    background-color: var(--surface-color);
     border: 1px solid var(--border-light);
     box-shadow: var(--shadow-md);
     z-index: 10;
@@ -152,7 +152,7 @@
 .resultName {
     font-size: 0.85rem;
     font-weight: 600;
-    color: var(--text-dark);
+    color: var(--text-color);
 }
 
 .resultPrice {
@@ -172,7 +172,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    color: var(--text-dark);
+    color: var(--text-color);
     transition: var(--transition);
     padding: 0.5rem;
 }

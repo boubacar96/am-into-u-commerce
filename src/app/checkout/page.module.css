@@ -17,7 +17,7 @@
 
 /* Form Styles */
 .formSection {
-    background-color: #fff;
+    background-color: var(--surface-color);
     padding: 2.5rem;
     border: 1px solid var(--border-light);
     margin-bottom: 2.5rem;
@@ -32,12 +32,12 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    color: var(--text-dark);
+    color: var(--text-color);
 }
 
 .stepNumber {
     background-color: var(--terracotta);
-    color: #fff;
+    color: var(--text-inverse);
     width: 32px;
     height: 32px;
     border-radius: 50%;
@@ -71,9 +71,9 @@
 
 .input {
     padding: 0.85rem 1rem;
-    background-color: var(--surface-light);
+    background-color: var(--surface-color);
     border: 1px solid var(--border-light);
-    color: var(--text-dark);
+    color: var(--text-color);
     font-family: inherit;
     font-size: 0.95rem;
     outline: none;
@@ -82,7 +82,7 @@
 
 .input:focus {
     border-color: var(--secondary-color);
-    background-color: #fff;
+    background-color: var(--surface-color);
     box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
 }
 
@@ -101,12 +101,12 @@
     border: 1px solid var(--border-light);
     cursor: pointer;
     transition: var(--transition);
-    background-color: var(--surface-light);
+    background-color: var(--surface-color);
 }
 
 .paymentOption.selected {
     border-color: var(--secondary-color);
-    background-color: #fff;
+    background-color: var(--surface-color);
     box-shadow: var(--shadow-sm);
 }
 
@@ -129,7 +129,7 @@
 .paymentName {
     font-weight: 700;
     font-size: 1rem;
-    color: var(--text-dark);
+    color: var(--text-color);
 }
 
 .paymentDesc {
@@ -162,7 +162,7 @@
 .itemImage {
     width: 64px;
     height: 64px;
-    background-color: #fff;
+    background-color: var(--surface-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -182,7 +182,7 @@
     top: -5px;
     right: -5px;
     background-color: var(--terracotta);
-    color: #fff;
+    color: var(--text-inverse);
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -203,7 +203,7 @@
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 0.4rem;
-    color: var(--text-dark);
+    color: var(--text-color);
 }
 
 .itemPrice {
@@ -223,7 +223,7 @@
 }
 
 .summaryLine.total {
-    color: var(--text-dark);
+    color: var(--text-color);
     font-weight: 800;
     font-size: 1.5rem;
     border-top: 1px solid var(--border-light);

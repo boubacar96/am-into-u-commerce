@@ -20,7 +20,7 @@
     padding: 0.75rem 2rem;
     background: none;
     border: 1px solid var(--border-light);
-    color: var(--text-dark);
+    color: var(--text-color);
     font-size: 0.85rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -32,7 +32,7 @@
 .filterBtn:hover,
 .filterBtnActive {
     background-color: var(--primary-color);
-    color: #fff;
+    color: var(--text-inverse);
     border-color: var(--primary-color);
 }
 

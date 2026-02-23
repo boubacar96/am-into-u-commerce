@@ -15,12 +15,12 @@
 
 .imageWrapper {
     aspect-ratio: 1 / 1.25;
-    background-color: #fff;
+    background-color: var(--surface-color);
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    border: 1px solid var(--border-light);
+    border: 1px solid var(--border-color);
 }
 
 .productImage {
@@ -44,7 +44,7 @@
     top: 0;
     left: 0;
     background-color: var(--primary-color);
-    color: #fff;
+    color: var(--text-inverse);
     padding: 0.4rem 0.8rem;
     font-size: 0.65rem;
     font-weight: 700;
@@ -63,8 +63,8 @@
     right: 1.5rem;
     width: 48px;
     height: 48px;
-    background-color: #fff;
-    border: 1px solid var(--border-light);
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -83,7 +83,7 @@
 
 .quickAdd:hover {
     background-color: var(--primary-color);
-    color: #fff;
+    color: var(--text-inverse);
     border-color: var(--primary-color);
 }
 
@@ -111,7 +111,7 @@
     font-family: var(--font-playfair), serif;
     font-size: 1.3rem;
     font-weight: 600;
-    color: var(--text-dark);
+    color: var(--text-color);
     line-height: 1.2;
     transition: var(--transition);
 }
@@ -130,7 +130,7 @@
 .price {
     font-weight: 700;
     font-size: 1.1rem;
-    color: var(--text-dark);
+    color: var(--text-color);
 }
 
 .oldPrice {
