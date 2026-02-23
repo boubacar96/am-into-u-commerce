@@ -1,9 +1,13 @@
 .productCard {
     display: flex;
     flex-direction: column;
-    transition: var(--transition);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
     position: relative;
     background-color: transparent;
+}
+
+.productCard:hover {
+    transform: translateY(-8px);
 }
 
 .imageLink {

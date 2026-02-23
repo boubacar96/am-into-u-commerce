@@ -57,9 +57,21 @@
 
 .socials {
     display: flex;
-    gap: 1rem;
-    cursor: pointer;
+    gap: 1.5rem;
     font-size: 1.2rem;
+}
+
+.socials span {
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: grayscale(1);
+    opacity: 0.6;
+}
+
+.socials span:hover {
+    transform: scale(1.2);
+    filter: grayscale(0);
+    opacity: 1;
 }
 
 @media (max-width: 768px) {

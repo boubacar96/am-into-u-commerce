@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import CartDrawer from "../components/CartDrawer";
+import WhatsAppButton from "../components/WhatsAppButton";
 import { CartProvider } from "../context/CartContext";
 import { CurrencyProvider } from "../context/CurrencyContext";
 import { ProductProvider } from "../context/ProductContext";
@@ -58,6 +59,7 @@ export default function RootLayout({
               <div style={{ flex: 1 }}>
                 {children}
               </div>
+              <WhatsAppButton />
               <Footer />
             </CartProvider>
           </CurrencyProvider>
