@@ -11,7 +11,7 @@ export default function AdminSettings() {
     const [storeName, setStoreName] = useState('Am-Into-U Trading');
     const [contactEmail, setContactEmail] = useState('contact@am-into-u.com');
     const [whatsappNumber, setWhatsappNumber] = useState('+225 00000000');
-    const [currency, setCurrency] = useState('EUR');
+    const [currency, setCurrency] = useState('XAF');
 
     // Design states
     const [themeMode, setThemeMode] = useState('light');

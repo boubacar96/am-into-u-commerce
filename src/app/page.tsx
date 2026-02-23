@@ -1,15 +1,19 @@
+"use client";
+
 import Link from 'next/link';
 import styles from './page.module.css';
 import ProductCard, { Product } from '../components/ProductCard';
+import { useCurrency } from '../context/CurrencyContext';
 
 const FEATURED_PRODUCTS: Product[] = [
-  { id: 1, name: "Safran de Taliouine - Grade A", price: 29.90, category: "Épices Rares", icon: "🌶️", badge: "Rare" },
-  { id: 2, name: "Bague 'Soleil d'Or' 18k", price: 185.00, category: "Bijoux", icon: "✨", badge: "Best-seller" },
-  { id: 3, name: "Oud Mystérieux Absolu 50ml", price: 120.00, oldPrice: 150.00, category: "Parfums", icon: "💧", badge: "-20%" },
-  { id: 4, name: "Poivre Noir de Sarawak", price: 14.50, category: "Épices", icon: "🌶️", badge: "Bio" },
+  { id: 1, name: "Safran de Taliouine - Grade A", price: 20000, category: "Épices Rares", icon: "🌶️", badge: "Rare" },
+  { id: 2, name: "Bague 'Soleil d'Or' 18k", price: 120000, category: "Bijoux", icon: "✨", badge: "Best-seller" },
+  { id: 3, name: "Oud Mystérieux Absolu 50ml", price: 80000, oldPrice: 100000, category: "Parfums", icon: "💧", badge: "-20%" },
+  { id: 4, name: "Poivre Noir de Sarawak", price: 10000, category: "Épices", icon: "🌶️", badge: "Bio" },
 ];
 
 export default function Home() {
+  const { formatPrice } = useCurrency();
   const heroImageUrl = "/assets/images/amy_spices_hero_bg_1771871022381.png";
 
   return (
@@ -94,7 +98,7 @@ export default function Home() {
           <div>
             <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🚚</div>
             <h4 style={{ fontWeight: 600, marginBottom: '0.25rem' }}>Livraison Express</h4>
-            <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Offerte dès 50€ d'achat</p>
+            <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Offerte dès {formatPrice(35000)} d'achat</p>
           </div>
           <div>
             <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🔒</div>

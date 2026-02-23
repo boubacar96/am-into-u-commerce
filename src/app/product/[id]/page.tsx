@@ -121,7 +121,7 @@ export default function ProductPage() {
                                     <p>Pour préserver la qualité de ce produit, nous vous conseillons de le conserver dans un endroit sec et à l'abri de la lumière directe du soleil.</p>
                                 )}
                                 {activeTab === 'shipping' && (
-                                    <p>Livraison express en 48/72h. Livraison offerte dès 50€ d'achat. Retours gratuits sous 30 jours.</p>
+                                    <p>Livraison express en 48/72h. Livraison offerte dès {formatPrice(35000)} d'achat. Retours gratuits sous 30 jours.</p>
                                 )}
                             </div>
                         </div>

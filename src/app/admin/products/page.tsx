@@ -6,16 +6,18 @@ import styles from '../admin.module.css';
 import { Product } from '../../../components/ProductCard';
 
 const DEFAULT_PRODUCTS: Product[] = [
-    { id: 1, name: "Curcuma Bio en Poudre", category: "Épices", price: 5.90, stock: 145, status: "instock", image: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=200" },
-    { id: 2, name: "Collier Doré 'Lune'", category: "Bijoux", price: 24.00, stock: 5, status: "lowstock", image: "https://images.unsplash.com/photo-1599643478514-4a884f6305a2?w=200" },
-    { id: 3, name: "Parfum Ambre Royal", category: "Parfums", price: 45.00, stock: 0, status: "cancelled", image: "https://images.unsplash.com/photo-1594035910387-fea47794261f?w=200" },
-    { id: 4, name: "Mix Grillades Spécial", category: "Épices", price: 8.50, stock: 89, status: "instock", image: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=200" },
+    { id: 1, name: "Curcuma Bio en Poudre", category: "Épices", price: 5000, stock: 145, status: "instock", image: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=200" },
+    { id: 2, name: "Collier Doré 'Lune'", category: "Bijoux", price: 15000, stock: 5, status: "lowstock", image: "https://images.unsplash.com/photo-1599643478514-4a884f6305a2?w=200" },
+    { id: 3, name: "Parfum Ambre Royal", category: "Parfums", price: 30000, stock: 0, status: "cancelled", image: "https://images.unsplash.com/photo-1594035910387-fea47794261f?w=200" },
+    { id: 4, name: "Mix Grillades Spécial", category: "Épices", price: 4500, stock: 89, status: "instock", image: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=200" },
 ];
 
 import { useProducts } from '../../../context/ProductContext';
+import { useCurrency } from '../../../context/CurrencyContext';
 
 export default function AdminProducts() {
     const { products, setProducts } = useProducts();
+    const { formatPrice } = useCurrency();
     const [mounted, setMounted] = useState(false);
     const [searchTerm, setSearchTerm] = useState("");
 
@@ -140,7 +142,7 @@ export default function AdminProducts() {
                                     {product.name}
                                 </td>
                                 <td>{product.category}</td>
-                                <td>{product.price} €</td>
+                                <td>{formatPrice(product.price)}</td>
                                 <td>{product.stock}</td>
                                 <td>
                                     <span className={`${styles.statusBadge} ${styles[`status-${product.status}`]}`}>
@@ -197,7 +199,7 @@ export default function AdminProducts() {
                                     </select>
                                 </div>
                                 <div style={{ flex: 1 }}>
-                                    <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 600, fontSize: '0.85rem' }}>Prix (EUR)</label>
+                                    <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 600, fontSize: '0.85rem' }}>Prix (FCFA)</label>
                                     <input
                                         type="text" required className="input" placeholder="ex: 12,50" style={{ width: '100%', padding: '0.8rem', border: '1px solid var(--border-color)', borderRadius: '4px' }}
                                         value={formData.price} onChange={e => setFormData({ ...formData, price: e.target.value })}

@@ -11,17 +11,17 @@ interface CurrencyContextType {
     convertPrice: (priceInEur: number) => number;
 }
 
-// Taux de change fictifs (Base EUR)
+// Taux de change (Base XAF/FCFA)
 const EXCHANGE_RATES: Record<Currency, number> = {
-    EUR: 1,
-    XAF: 655.96, // 1 EUR = ~655.96 FCFA
-    USD: 1.08,   // 1 EUR = ~1.08 USD
+    XAF: 1,
+    EUR: 1 / 655.96, // 1 FCFA = ~0.0015 EUR
+    USD: 1 / 600,    // Approximation 1 USD = ~600 FCFA
 };
 
 const CurrencyContext = createContext<CurrencyContextType | undefined>(undefined);
 
 export function CurrencyProvider({ children }: { children: ReactNode }) {
-    const [currency, setCurrencyState] = useState<Currency>('EUR');
+    const [currency, setCurrencyState] = useState<Currency>('XAF');
     const [isInitialized, setIsInitialized] = useState(false);
 
     // Charger la devise depuis le localStorage au démarrage
@@ -44,17 +44,17 @@ export function CurrencyProvider({ children }: { children: ReactNode }) {
         }
     };
 
-    const convertPrice = (priceInEur: number) => {
-        return priceInEur * EXCHANGE_RATES[currency];
+    const convertPrice = (priceInBase: number) => {
+        return priceInBase * EXCHANGE_RATES[currency];
     };
 
-    const formatPrice = (priceInEur: number): string => {
-        const converted = convertPrice(priceInEur);
+    const formatPrice = (priceInBase: number): string => {
+        const converted = convertPrice(priceInBase);
 
         switch (currency) {
             case 'XAF':
                 // Le FCFA n'affiche généralement pas de centimes et s'écrit avec des espaces (ex: 15 000 FCFA)
-                return `${Math.round(converted).toLocaleString('fr-FR')} FCFA`;
+                return `${Math.round(converted).toLocaleString('fr-FR').replace(/\s/g, ' ')} FCFA`;
             case 'USD':
                 // Le dollar s'affiche généralement avec le symbole avant et un point (ex: $15.50)
                 return `$${converted.toFixed(2)}`;

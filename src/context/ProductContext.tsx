@@ -16,7 +16,7 @@ const DEFAULT_PRODUCTS: Product[] = [
     {
         id: 1,
         name: "Safran de Taliouine - Grade A",
-        price: 29.90,
+        price: 20000,
         category: "Épices Rares",
         image: "/assets/images/luxury_saffron_packaging_1771871590753.png",
         badge: "Rare",
@@ -24,13 +24,13 @@ const DEFAULT_PRODUCTS: Product[] = [
         stock: 50,
         status: 'instock'
     },
-    { id: 4, name: "Poivre Noir de Sarawak", price: 14.50, category: "Épices", icon: "🌶️", badge: "Bio", stock: 120, status: "instock", description: "Un poivre puissant aux notes boisées et fruitées." },
+    { id: 4, name: "Poivre Noir de Sarawak", price: 10000, category: "Épices", icon: "🌶️", badge: "Bio", stock: 120, status: "instock", description: "Un poivre puissant aux notes boisées et fruitées." },
 
     // Bijoux
     {
         id: 2,
         name: "Bague 'Soleil d'Or' 18k",
-        price: 185.00,
+        price: 120000,
         category: "Bijoux",
         image: "/assets/images/african_minimalist_jewelry_1771871344071.png",
         badge: "Best-seller",
@@ -38,14 +38,14 @@ const DEFAULT_PRODUCTS: Product[] = [
         stock: 15,
         status: 'instock'
     },
-    { id: 5, name: "Collier Goutte d'Or", price: 145.00, category: "Bijoux", icon: "✨", stock: 25, status: "instock", description: "Élégance discrète pour ce collier en or pur." },
+    { id: 5, name: "Collier Goutte d'Or", price: 95000, category: "Bijoux", icon: "✨", stock: 25, status: "instock", description: "Élégance discrète pour ce collier en or pur." },
 
     // Parfums
     {
         id: 3,
         name: "Oud Mystérieux Absolu 50ml",
-        price: 120.00,
-        oldPrice: 150.00,
+        price: 80000,
+        oldPrice: 100000,
         category: "Parfums",
         image: "/assets/images/luxury_oud_perfume_bottle_1771871462941.png",
         badge: "-20%",
@@ -53,7 +53,7 @@ const DEFAULT_PRODUCTS: Product[] = [
         stock: 45,
         status: 'instock'
     },
-    { id: 6, name: "Rose Noir Extrait 30ml", price: 95.00, category: "Parfums", icon: "💧", stock: 30, status: "instock", description: "Une rose mystique, sombre et envoûtante." },
+    { id: 6, name: "Rose Noir Extrait 30ml", price: 65000, category: "Parfums", icon: "💧", stock: 30, status: "instock", description: "Une rose mystique, sombre et envoûtante." },
 ];
 
 export const ProductProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {

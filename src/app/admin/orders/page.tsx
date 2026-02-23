@@ -15,11 +15,11 @@ type Order = {
 };
 
 const INITIAL_ORDERS: Order[] = [
-    { id: "#AMI-8472", customer: "Jean Dupont", date: "23 Fév 2026, 14:30", total: "45,00 €", status: "completed", paymentMethod: "Carte Bancaire" },
-    { id: "#AMI-8471", customer: "Awa Sylla", date: "23 Fév 2026, 11:15", total: "120,50 €", status: "pending", paymentMethod: "Orange Money" },
-    { id: "#AMI-8470", customer: "Marc L.", date: "22 Fév 2026, 09:00", total: "22,90 €", status: "completed", paymentMethod: "PayPal" },
-    { id: "#AMI-8469", customer: "Sophie K.", date: "22 Fév 2026, 08:30", total: "89,00 €", status: "cancelled", paymentMethod: "Wave" },
-    { id: "#AMI-8468", customer: "Moussa S.", date: "21 Fév 2026, 18:45", total: "15,00 €", status: "completed", paymentMethod: "Espèces (Livraison)" },
+    { id: "#AMI-8472", customer: "Jean Dupont", date: "23 Fév 2026, 14:30", total: "22 500 FCFA", status: "completed", paymentMethod: "Carte Bancaire" },
+    { id: "#AMI-8471", customer: "Awa Sylla", date: "23 Fév 2026, 11:15", total: "120 000 FCFA", status: "pending", paymentMethod: "Orange Money" },
+    { id: "#AMI-8470", customer: "Marc L.", date: "22 Fév 2026, 09:00", total: "15 000 FCFA", status: "completed", paymentMethod: "PayPal" },
+    { id: "#AMI-8469", customer: "Sophie K.", date: "22 Fév 2026, 08:30", total: "85 000 FCFA", status: "cancelled", paymentMethod: "Wave" },
+    { id: "#AMI-8468", customer: "Moussa S.", date: "21 Fév 2026, 18:45", total: "5 000 FCFA", status: "completed", paymentMethod: "Espèces (Livraison)" },
 ];
 
 export default function AdminOrders() {

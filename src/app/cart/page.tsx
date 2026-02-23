@@ -91,7 +91,7 @@ export default function CartPage() {
 
                             <div className={styles.summaryLine}>
                                 <span>Livraison Standard</span>
-                                <span>{getCartTotal() >= 50 ? 'Offerte' : '4,90 €'}</span>
+                                <span>{getCartTotal() >= 35000 ? 'Offerte' : formatPrice(3000)}</span>
                             </div>
 
                             <div className={styles.summaryLine}>
@@ -101,7 +101,7 @@ export default function CartPage() {
 
                             <div className={`${styles.summaryLine} ${styles.total}`}>
                                 <span>Total estimé</span>
-                                <span>{formatPrice(getCartTotal() >= 50 ? getCartTotal() : getCartTotal() + 4.9)}</span>
+                                <span>{formatPrice(getCartTotal() >= 35000 ? getCartTotal() : getCartTotal() + 3000)}</span>
                             </div>
 
                             <Link href="/checkout" className={`button-primary ${styles.checkoutBtn}`}>

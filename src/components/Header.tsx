@@ -41,7 +41,7 @@ export default function Header() {
     return (
         <>
             <div className={styles.announcementBar}>
-                Expédition rapide | Qualité Premium "Amy'spices" | Livraison offerte dès {mounted ? formatPrice(50) : '50,00 €'}
+                Expédition rapide | Qualité Premium "Amy'spices" | Livraison offerte dès {mounted ? formatPrice(35000) : '35 000 FCFA'}
             </div>
 
             <header className={styles.header}>
@@ -111,8 +111,8 @@ export default function Header() {
                                 onChange={(e) => setCurrency(e.target.value as Currency)}
                                 className={styles.currencySelect}
                             >
-                                <option value="EUR">€ EUR</option>
                                 <option value="XAF">FCFA</option>
+                                <option value="EUR">€ EUR</option>
                                 <option value="USD">$ USD</option>
                             </select>
                         )}

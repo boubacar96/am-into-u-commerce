@@ -38,7 +38,7 @@ export default function CheckoutPage() {
     if (!mounted) return null;
 
     const total = getCartTotal();
-    const shipping = total >= 50 ? 0 : 4.90;
+    const shipping = total >= 35000 ? 0 : 3000;
     const finalTotal = total + shipping;
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
