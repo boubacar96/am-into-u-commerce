@@ -1,0 +1,65 @@
+.shopPage {
+    padding: 6rem 0;
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+}
+
+.filterBtn {
+    padding: 0.75rem 2rem;
+    background: none;
+    border: 1px solid var(--border-light);
+    color: var(--text-dark);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filterBtn:hover,
+.filterBtnActive {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.noProducts {
+    text-align: center;
+    padding: 5rem 0;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .filters {
+        gap: 0.75rem;
+    }
+
+    .filterBtn {
+        padding: 0.5rem 1.25rem;
+        font-size: 0.75rem;
+    }
+}

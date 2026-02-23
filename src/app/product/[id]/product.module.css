@@ -1,0 +1,242 @@
+.productMain {
+    padding-top: 2rem;
+    padding-bottom: 6rem;
+    background-color: var(--bg-color);
+}
+
+.breadcrumb {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.breadcrumb a {
+    transition: var(--transition);
+}
+
+.breadcrumb a:hover {
+    color: var(--secondary-color);
+}
+
+.productGrid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 5rem;
+    margin-bottom: 8rem;
+}
+
+.mainImageWrapper {
+    aspect-ratio: 1/1.2;
+    background-color: #fff;
+    border: 1px solid var(--border-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 120px;
+}
+
+.mainImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.placeholder {
+    font-size: 8rem;
+    opacity: 0.3;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+}
+
+.categoryBadge {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: var(--terracotta);
+    margin-bottom: 1.5rem;
+}
+
+.title {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+}
+
+.priceRow {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.oldPrice {
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    text-decoration: line-through;
+}
+
+.shortDesc {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+}
+
+.purchaseControls {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.quantitySelector {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border-light);
+    background-color: #fff;
+}
+
+.quantitySelector button {
+    width: 50px;
+    height: 100%;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.quantitySelector button:hover {
+    background-color: var(--surface-light);
+}
+
+.quantitySelector span {
+    width: 40px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Tabs */
+.tabs {
+    border-top: 1px solid var(--border-light);
+    margin-bottom: 3rem;
+}
+
+.tabHeaders {
+    display: flex;
+    gap: 2.5rem;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.tabHeaders button {
+    background: none;
+    border: none;
+    padding: 1.5rem 0;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    position: relative;
+    opacity: 0.6;
+    transition: var(--transition);
+}
+
+.tabHeaders button.activeTab {
+    opacity: 1;
+}
+
+.tabHeaders button.activeTab::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+.tabContent {
+    padding: 2rem 0;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-light);
+}
+
+.featureItem {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-dark);
+}
+
+/* Suggestions */
+.suggestions {
+    border-top: 1px solid var(--border-light);
+    padding-top: 6rem;
+}
+
+.suggestionTitle {
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.suggestionGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+    .productGrid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .mainImageWrapper {
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+    .suggestionGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .purchaseControls {
+        flex-direction: column;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+}

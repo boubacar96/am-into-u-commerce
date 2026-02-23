@@ -1,0 +1,101 @@
+.collectionsPage {
+    padding: 6rem 0;
+}
+
+.title {
+    font-size: 3.5rem;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.collectionCard {
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 3rem;
+    text-decoration: none;
+    color: #fff;
+    transition: var(--transition);
+}
+
+.collectionCard img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.collectionCard::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    z-index: -1;
+}
+
+.collectionCard:hover img {
+    transform: scale(1.1);
+}
+
+.cardSubtitle {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+}
+
+.cardTitle {
+    font-family: var(--font-playfair), serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.cardLink {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.25rem;
+    align-self: flex-start;
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .collectionCard {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .cardTitle {
+        font-size: 1.8rem;
+    }
+}

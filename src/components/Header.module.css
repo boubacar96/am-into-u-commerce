@@ -1,0 +1,238 @@
+.announcementBar {
+    background-color: var(--terracotta);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass-border);
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.headerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.nav {
+    flex: 1;
+    margin-left: 4rem;
+}
+
+.navList {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.navLink {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
+    color: var(--text-dark);
+    opacity: 0.8;
+}
+
+.navLink:hover {
+    color: var(--secondary-color);
+    opacity: 1;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* New Search Design */
+.searchWrapper {
+    position: relative;
+    width: 250px;
+    transition: var(--transition);
+}
+
+.searchWrapper:focus-within {
+    width: 320px;
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    background-color: var(--surface-light);
+    border: 1px solid var(--border-light);
+    padding: 0.5rem 1rem;
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+.searchBar:focus-within {
+    border-color: var(--secondary-color);
+    background-color: #fff;
+}
+
+.searchInput {
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 0.85rem;
+    width: 100%;
+    color: var(--text-color);
+}
+
+.searchResults {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-md);
+    z-index: 10;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.resultItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--surface-light);
+    transition: var(--transition);
+}
+
+.resultItem:hover {
+    background-color: var(--surface-light);
+}
+
+.resultImage {
+    width: 40px;
+    height: 40px;
+    background-color: var(--surface-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.resultImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.resultInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.resultName {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.resultPrice {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.noResult {
+    padding: 1rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.iconButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: var(--text-dark);
+    transition: var(--transition);
+    padding: 0.5rem;
+}
+
+.iconButton:hover {
+    color: var(--secondary-color);
+}
+
+.cartCount {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--accent-color);
+    color: white;
+    font-size: 0.65rem;
+    font-weight: 700;
+    height: 16px;
+    width: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.searchBar {
+    display: none;
+    /* Hide on mobile initially */
+    align-items: center;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 0.3rem 0.8rem;
+    margin-right: 1rem;
+}
+
+.searchInput {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--text-color);
+    font-size: 0.85rem;
+    width: 150px;
+}
+
+@media (min-width: 1024px) {
+    .searchBar {
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+
+    .searchBar {
+        display: none;
+    }
+
+    .logo {
+        text-align: center;
+        flex: 2;
+    }
+}

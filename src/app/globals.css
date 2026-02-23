@@ -1,0 +1,215 @@
+:root {
+  /* Warm & Luxurious E-commerce Palette: Amy'spices Edition */
+  --primary-color: #1a1a1a;
+  --secondary-color: #d4af37;
+  /* Metallic Gold */
+
+  /* Brand Colors */
+  --saffron: #f4a261;
+  --saffron-deep: #e76f51;
+  --terracotta: #8d493a;
+  --sand: #f4f1de;
+
+  --accent-color: var(--saffron-deep);
+  --success-color: #386641;
+
+  --background-light: #fffdfa;
+  /* Off-white for warmth */
+  --background-dark: #0f0d0c;
+  /* Deep charcoal/brown */
+
+  --surface-light: #fdfaf5;
+  --surface-dark: #1a1614;
+
+  --text-dark: #1a1614;
+  --text-light: #f4f1de;
+  --text-muted-light: #7a6e67;
+  --text-muted-dark: #a89a91;
+
+  --border-light: #e8e2dc;
+  --border-dark: #2d2825;
+
+  /* Current theme */
+  --bg-color: var(--background-light);
+  --surface-color: var(--surface-light);
+  --text-color: var(--text-dark);
+  --text-muted: var(--text-muted-light);
+  --border-color: var(--border-light);
+
+  --max-width: 1400px;
+  --border-radius: 2px;
+  /* Very sharp luxury aesthetic */
+  --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Modern Effects */
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme='dark'] {
+  --bg-color: var(--background-dark);
+  --surface-color: var(--surface-dark);
+  --text-color: var(--text-light);
+  --text-muted: var(--text-muted-dark);
+  --border-color: var(--border-dark);
+  --primary-color: #ffffff;
+  --glass-bg: rgba(26, 22, 20, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  font-family: var(--font-inter), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image:
+    radial-gradient(at 0% 0%, rgba(244, 162, 97, 0.05) 0, transparent 50%),
+    radial-gradient(at 50% 0%, rgba(212, 175, 55, 0.05) 0, transparent 50%);
+  background-attachment: fixed;
+}
+
+/* Background grain effect */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.02;
+  z-index: -1;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Utilities */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.premium-title {
+  font-family: var(--font-playfair), serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+/* Global E-commerce Elements */
+.badge {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  border-radius: 0;
+  letter-spacing: 1px;
+}
+
+.badge-sale {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.button-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  border: 1px solid var(--primary-color);
+  padding: 1rem 2rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: var(--transition);
+  border-radius: var(--border-radius);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.button-primary:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.button-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 0.9rem 1.8rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: var(--transition);
+  border-radius: var(--border-radius);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.button-outline:hover {
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
